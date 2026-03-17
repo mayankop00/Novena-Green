@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mangalya Novena Green | Luxury 2 & 3 BHK Apartments</title>
+    <meta name="description" content="Book your Ready-to-Move luxury apartment in Novena Green, Tech Zone-IV, Greater Noida West. Premium 2 & 3 BHK flats by Mangalya Group.">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Outfit', 'sans-serif'] },
+                    colors: {
+                        primary: '#166534', // Deep Green
+                        accent: '#ca8a04',  // Gold
+                    }
+                }
+            }
+        }
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="bg-slate-50 text-slate-800 antialiased">
+
+    <nav class="fixed w-full z-50 transition-all duration-300 bg-white shadow-md" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0 flex items-center gap-2">
+                    <i class="fa-solid fa-leaf text-primary text-3xl"></i>
+                    <span class="font-bold text-2xl tracking-tight text-slate-900">Novena <span class="text-primary">Green</span></span>
+                </div>
+                
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="#" class="font-medium text-slate-600 hover:text-primary transition">Home</a>
+                    <a href="#overview" class="font-medium text-slate-600 hover:text-primary transition">Overview</a>
+                    <a href="#configurations" class="font-medium text-slate-600 hover:text-primary transition">Configurations</a>
+                    <a href="#gallery" class="font-medium text-slate-600 hover:text-primary transition">Gallery</a>
+                    
+                    <a href="https://www.google.com/maps/search/?api=1&query=Mangalya+Novena+Green,+Tech+Zone-IV,+Greater+Noida+West" target="_blank" class="font-medium text-slate-600 hover:text-primary transition flex items-center gap-1">
+                        <i class="fa-solid fa-map-location-dot"></i> Location
+                    </a>
+                    
+                    <a href="tel:+918630775289" class="bg-primary text-white px-5 py-2 rounded-full font-semibold hover:bg-green-800 transition shadow-lg flex items-center gap-2">
+                        <i class="fa-solid fa-phone-volume"></i> +91 863 077 5289
+                    </a>
+                </div>
+
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-slate-600 hover:text-primary focus:outline-none text-2xl">
+                        <i class="fa-solid fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 absolute w-full shadow-xl">
+            <a href="#" class="block px-4 py-3 text-slate-700 hover:bg-slate-50 hover:text-primary border-b border-gray-100">Home</a>
+            <a href="#overview" class="block px-4 py-3 text-slate-700 hover:bg-slate-50 hover:text-primary border-b border-gray-100">Overview</a>
+            <a href="#configurations" class="block px-4 py-3 text-slate-700 hover:bg-slate-50 hover:text-primary border-b border-gray-100">Configurations</a>
+            <a href="#gallery" class="block px-4 py-3 text-slate-700 hover:bg-slate-50 hover:text-primary border-b border-gray-100">Gallery</a>
+            
+            <a href="https://www.google.com/maps/search/?api=1&query=Mangalya+Novena+Green,+Tech+Zone-IV,+Greater+Noida+West" target="_blank" class="block px-4 py-3 text-slate-700 hover:bg-slate-50 hover:text-primary">
+                <i class="fa-solid fa-map-location-dot w-5"></i> Location Map
+            </a>
+        </div>
+    </nav>
+
+    <section class="hero-bg relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 flex flex-col lg:flex-row items-center">
+            
+            <div class="w-full lg:w-3/5 text-white pr-0 lg:pr-12 mb-12 lg:mb-0">
+                <h1 class="text-4xl md:text-5xl lg:text-7xl font-bold leading-tight mb-6">
+                    Nature-Inspired <br>Luxury Living in <span class="text-accent">Noida Ext.</span>
+                </h1>
+                <p class="text-lg md:text-xl text-slate-200 mb-8 max-w-2xl font-light">
+                    Move into Mangalya Novena Green. Premium 2 & 3 BHK Ready-to-Move apartments designed for comfort, featuring 70% open green spaces.
+                </p>
+                <div class="flex flex-wrap gap-4">
+                    <button onclick="document.getElementById('contact-form').scrollIntoView({behavior: 'smooth'})" class="bg-accent hover:bg-yellow-500 text-white font-bold py-4 px-8 rounded-full transition shadow-[0_0_20px_rgba(202,138,4,0.5)]">
+                        Schedule Site Visit
+                    </button>
+                    <a href="https://www.novenagreennoidaextension.in/images/novena-green-brochure.pdf" target="_blank" class="bg-white/20 hover:bg-white/30 backdrop-blur-sm border border-white/50 text-white font-bold py-4 px-8 rounded-full transition flex items-center gap-2">
+                        <i class="fa-solid fa-file-pdf"></i> Download Brochure
+                    </a>
+                </div>
+            </div>
+
+            <div class="w-full md:w-4/5 lg:w-2/5 max-w-md mx-auto lg:mx-0">
+                <div id="contact-form" class="glass-panel p-8 rounded-2xl relative">
+                    <div class="absolute -top-4 -right-4 bg-primary text-white w-20 h-20 rounded-full flex items-center justify-center font-bold text-center text-sm shadow-xl transform rotate-12 border-4 border-white">
+                        Ready To<br>Move
+                    </div>
+                    <h3 class="text-2xl font-bold text-slate-800 mb-2">Express Interest</h3>
+                    <p class="text-slate-500 text-sm mb-6">Get detailed floor plans and availability instantly.</p>
+                    
+                    <form id="enquiryForm" action="https://formspree.io/f/mpqyyvyb" method="POST" class="space-y-4">
+                        <div>
+                            <input type="text" id="userName" name="name" required placeholder="Full Name *" class="w-full px-4 py-3 rounded-lg bg-white border border-slate-200 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition">
+                        </div>
+                        <div>
+                            <input type="tel" id="userPhone" name="phone" required pattern="[0-9]{10}" placeholder="Phone Number (10 digits) *" class="w-full px-4 py-3 rounded-lg bg-white border border-slate-200 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition">
+                        </div>
+                        <div>
+                            <input type="email" id="userEmail" name="email" placeholder="Email Address (Optional)" class="w-full px-4 py-3 rounded-lg bg-white border border-slate-200 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition">
+                        </div>
+                        <div>
+                            <select name="configuration" class="w-full px-4 py-3 rounded-lg bg-white border border-slate-200 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition text-slate-600" required>
+                                <option value="">Select Configuration</option>
+                                <option value="2 BHK">2 BHK</option>
+                                <option value="3 BHK">3 BHK</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="w-full bg-slate-900 hover:bg-primary text-white font-bold py-4 rounded-lg transition duration-300 flex items-center justify-center gap-2">
+                            <span>Get Instant Call Back</span> <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="overview" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col lg:flex-row gap-16 items-center">
+                
+                <div class="w-full lg:w-1/2">
+                    <div class="relative rounded-2xl overflow-hidden shadow-2xl img-wrapper">
+                        <img src="novenagreen1.jpg" alt="Novena Green Living Room" class="w-full h-auto img-zoom">
+                        <div class="absolute bottom-4 left-4 bg-white/90 backdrop-blur px-6 py-3 rounded-xl shadow-lg">
+                            <p class="font-bold text-primary text-xl">4 Acres</p>
+                            <p class="text-sm text-slate-600 font-medium">Total Project Land</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="w-full lg:w-1/2">
+                    <h2 class="text-3xl md:text-4xl font-bold text-slate-800 heading-underline mb-6">A Masterpiece by Mangalya Group</h2>
+                    <p class="text-slate-600 leading-relaxed mb-6 text-lg">
+                        Located at <strong>Plot No. CP-GH-5B, Tech Zone-IV, Greater Noida West</strong>, Novena Green offers an unparalleled urban lifestyle. Designed for abundant natural light and cross-ventilation, these Vastu-compliant homes ensure complete peace of mind.
+                    </p>
+                    
+                    <div class="grid grid-cols-2 gap-6 mt-8">
+                        <div class="flex items-start gap-4">
+                            <div class="bg-green-100 p-3 rounded-lg text-primary text-xl"><i class="fa-solid fa-tree"></i></div>
+                            <div>
+                                <h4 class="font-bold text-slate-800">70% Open Space</h4>
+                                <p class="text-sm text-slate-500">Pollution-free environment</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div class="bg-blue-100 p-3 rounded-lg text-blue-600 text-xl"><i class="fa-solid fa-building"></i></div>
+                            <div>
+                                <h4 class="font-bold text-slate-800">G+20 Floors</h4>
+                                <p class="text-sm text-slate-500">Across 6 High-rise Towers</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div class="bg-yellow-100 p-3 rounded-lg text-accent text-xl"><i class="fa-solid fa-key"></i></div>
+                            <div>
+                                <h4 class="font-bold text-slate-800">Ready to Move</h4>
+                                <p class="text-sm text-slate-500">Immediate Possession</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div class="bg-purple-100 p-3 rounded-lg text-purple-600 text-xl"><i class="fa-solid fa-swimmer"></i></div>
+                            <div>
+                                <h4 class="font-bold text-slate-800">Luxury Club</h4>
+                                <p class="text-sm text-slate-500">Pool, Gym & Sports</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="configurations" class="py-20 bg-slate-50 border-t border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold text-slate-800 mb-4">Unit Configurations</h2>
+            <p class="text-slate-600 mb-12 max-w-2xl mx-auto">Thoughtfully designed layouts maximizing space and comfort for modern living.</p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto text-left">
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 hover:shadow-xl transition-shadow duration-300 relative overflow-hidden group">
+                    <div class="absolute top-0 left-0 w-full h-1 bg-primary transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></div>
+                    <div class="flex items-center justify-between mb-4">
+                        <h3 class="text-3xl font-bold text-slate-800">2 BHK</h3>
+                        <div class="bg-green-100 text-primary w-12 h-12 flex items-center justify-center rounded-full text-xl"><i class="fa-solid fa-bed"></i></div>
+                    </div>
+                    <p class="text-slate-600 mb-6 leading-relaxed">Spacious 2-bedroom apartments designed for modern families, featuring optimal ventilation, elegant interiors, and ample natural light.</p>
+                    <button onclick="document.getElementById('contact-form').scrollIntoView()" class="text-accent font-bold text-sm uppercase tracking-wide hover:text-primary transition flex items-center gap-2">Request Floor Plan <i class="fa-solid fa-arrow-right"></i></button>
+                </div>
+                
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 hover:shadow-xl transition-shadow duration-300 relative overflow-hidden group">
+                    <div class="absolute top-0 left-0 w-full h-1 bg-primary transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></div>
+                    <div class="flex items-center justify-between mb-4">
+                        <h3 class="text-3xl font-bold text-slate-800">3 BHK</h3>
+                        <div class="bg-green-100 text-primary w-12 h-12 flex items-center justify-center rounded-full text-xl"><i class="fa-solid fa-bed"></i></div>
+                    </div>
+                    <p class="text-slate-600 mb-6 leading-relaxed">Premium 3-bedroom residences offering expansive living areas, optional study spaces, and luxurious comfort for a grand lifestyle.</p>
+                    <button onclick="document.getElementById('contact-form').scrollIntoView()" class="text-accent font-bold text-sm uppercase tracking-wide hover:text-primary transition flex items-center gap-2">Request Floor Plan <i class="fa-solid fa-arrow-right"></i></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="gallery" class="py-20 bg-slate-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-end mb-10">
+                <div>
+                    <h2 class="text-3xl md:text-4xl font-bold text-white mb-2">Project Gallery</h2>
+                    <p class="text-slate-400">A glimpse into your future home.</p>
+                </div>
+            </div>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                <div class="rounded-xl overflow-hidden h-64 img-wrapper cursor-pointer shadow-lg" onclick="viewImage(this.querySelector('img').src)">
+                    <img src="gallery1.jpg" alt="Gallery View 1" class="w-full h-full object-cover img-zoom">
+                </div>
+                <div class="rounded-xl overflow-hidden h-64 img-wrapper cursor-pointer shadow-lg" onclick="viewImage(this.querySelector('img').src)">
+                    <img src="gallery2.jpg" alt="Gallery View 2" class="w-full h-full object-cover img-zoom">
+                </div>
+                <div class="rounded-xl overflow-hidden h-64 img-wrapper cursor-pointer shadow-lg" onclick="viewImage(this.querySelector('img').src)">
+                    <img src="gallery3.jpg" alt="Gallery View 3" class="w-full h-full object-cover img-zoom">
+                </div>
+                <div class="rounded-xl overflow-hidden h-64 img-wrapper cursor-pointer shadow-lg" onclick="viewImage(this.querySelector('img').src)">
+                    <img src="gallery4.jpg" alt="Gallery View 4" class="w-full h-full object-cover img-zoom">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="location" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl md:text-4xl font-bold text-slate-800 heading-underline mb-12 text-center mx-auto">Seamless Connectivity</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+                <div class="p-8 rounded-2xl bg-slate-50 hover:bg-white hover:shadow-xl transition-all border border-slate-100">
+                    <div class="w-16 h-16 mx-auto bg-blue-100 text-blue-600 rounded-full flex items-center justify-center text-2xl mb-6">
+                        <i class="fa-solid fa-train-tram"></i>
+                    </div>
+                    <h4 class="font-bold text-lg mb-4 text-slate-800">Transit & Metro</h4>
+                    <ul class="text-slate-600 text-sm space-y-3">
+                        <li>0 Km from Proposed Metro Station</li>
+                        <li>8 Min from Sector 52 Metro</li>
+                        <li>Well connected to FNG Expressway</li>
+                    </ul>
+                </div>
+                
+                <div class="p-8 rounded-2xl bg-slate-50 hover:bg-white hover:shadow-xl transition-all border border-slate-100">
+                    <div class="w-16 h-16 mx-auto bg-green-100 text-primary rounded-full flex items-center justify-center text-2xl mb-6">
+                        <i class="fa-solid fa-hospital"></i>
+                    </div>
+                    <h4 class="font-bold text-lg mb-4 text-slate-800">Healthcare & Education</h4>
+                    <ul class="text-slate-600 text-sm space-y-3">
+                        <li>1 Min from Ryan International School</li>
+                        <li>8 Min from Fortis Hospital Noida</li>
+                        <li>Close to Yatharth Super Speciality</li>
+                    </ul>
+                </div>
+
+                <div class="p-8 rounded-2xl bg-slate-50 hover:bg-white hover:shadow-xl transition-all border border-slate-100">
+                    <div class="w-16 h-16 mx-auto bg-purple-100 text-purple-600 rounded-full flex items-center justify-center text-2xl mb-6">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                    </div>
+                    <h4 class="font-bold text-lg mb-4 text-slate-800">Shopping & Entertainment</h4>
+                    <ul class="text-slate-600 text-sm space-y-3">
+                        <li>2 Min from Gaur City Mall</li>
+                        <li>Surrounded by Commercial Hubs</li>
+                        <li>5 Min from NH-24 Ghaziabad</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-slate-900 text-slate-300 py-12 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div>
+                <div class="flex items-center gap-2 mb-4">
+                    <i class="fa-solid fa-leaf text-primary text-2xl"></i>
+                    <span class="font-bold text-xl text-white">Novena Green</span>
+                </div>
+                <p class="text-sm text-slate-400 mb-4 leading-relaxed">
+                    A premium residential development by Mangalya Group. Designed to make your living truly spectacular, seeking inspiration from nature.
+                </p>
+            </div>
+            
+            <div>
+                <h4 class="text-lg font-bold text-white mb-4">Site Address</h4>
+                <a href="https://www.google.com/maps/search/?api=1&query=Mangalya+Novena+Green,+Tech+Zone-IV,+Greater+Noida+West" target="_blank" class="block group">
+                    <p class="text-sm text-slate-400 mb-2 group-hover:text-primary transition"><i class="fa-solid fa-location-dot mr-2 text-primary"></i> Plot No. CP-GH-5B, Tech Zone-IV</p>
+                    <p class="text-sm text-slate-400 mb-2 pl-5 group-hover:text-primary transition">Greater Noida West, Uttar Pradesh</p>
+                </a>
+                <p class="text-sm text-slate-400 mt-4"><i class="fa-solid fa-phone mr-2 text-primary"></i> <a href="tel:+918630775289" class="hover:text-white transition">+91 863 077 5289</a></p>
+            </div>
+        </div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-12 pt-8 border-t border-slate-800 text-center text-sm text-slate-500">
+            This website is developed by <a href="https://koredigital.netlify.app/" target="_blank" class="font-semibold text-slate-300 hover:text-primary transition">Kore Digital</a>
+        </div>
+    </footer>
+
+    <a href="tel:+918630775289" class="fixed bottom-6 right-6 md:hidden bg-primary text-white w-14 h-14 rounded-full flex items-center justify-center text-2xl shadow-[0_5px_20px_rgba(22,101,52,0.5)] z-50 hover:scale-110 transition-transform">
+        <i class="fa-solid fa-phone"></i>
+    </a>
+
+    <script src="script.js"></script>
+</body>
+</html>
