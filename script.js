@@ -1,53 +1,47 @@
-// Formspree AJAX Submission Handler
+// Modern Google Forms Fetch Submission
 document.getElementById('enquiryForm').addEventListener('submit', function(e) {
-    e.preventDefault();
+    e.preventDefault(); // Stops the page from redirecting
     
     const form = e.target;
-    const data = new FormData(form);
+    // CRITICAL FIX: Convert data to URL-encoded string so Google accepts it via fetch
+    const formData = new FormData(form);
+    const urlEncodedData = new URLSearchParams(formData).toString();
     const name = document.getElementById('userName').value;
     
-    // Show loading state on button
+    // Show loading state
     const btn = form.querySelector('button[type="submit"]');
     const originalBtnText = btn.innerHTML;
     btn.innerHTML = '<i class="fa-solid fa-circle-notch fa-spin"></i> Sending...';
     btn.disabled = true;
 
+    // Send the data securely in the background
     fetch(form.action, {
-        method: form.method,
-        body: data,
+        method: 'POST',
+        mode: 'no-cors', // Crucial for bypassing Google's strict CORS policy
         headers: {
-            'Accept': 'application/json'
-        }
-    }).then(response => {
-        if (response.ok) {
-            // SweetAlert Success Message
-            Swal.fire({
-                title: 'Thank You, ' + name + '!',
-                text: 'Your enquiry has been received. Our property expert will contact you shortly.',
-                icon: 'success',
-                confirmButtonColor: '#166534',
-                confirmButtonText: 'Great!'
-            });
-            form.reset(); // Clear the form
-        } else {
-            // Handle Error
-            Swal.fire({
-                title: 'Oops!',
-                text: 'There was a problem submitting your form. Please try calling us instead.',
-                icon: 'error',
-                confirmButtonColor: '#166534'
-            });
-        }
+            'Content-Type': 'application/x-www-form-urlencoded'
+        },
+        body: urlEncodedData
+    }).then(() => {
+        // Trigger success popup
+        Swal.fire({
+            title: 'Thank You, ' + name + '!',
+            text: 'Your enquiry has been received. Our property expert will contact you shortly.',
+            icon: 'success',
+            confirmButtonColor: '#166534',
+            confirmButtonText: 'Great!'
+        });
+        form.reset(); // Clear the inputs
     }).catch(error => {
-        // Handle Network Error
+        // Handle errors
         Swal.fire({
             title: 'Oops!',
-            text: 'There was a network error. Please try again or call us.',
+            text: 'There was a network error. Please try again later.',
             icon: 'error',
             confirmButtonColor: '#166534'
         });
     }).finally(() => {
-        // Restore button state
+        // Reset button state
         btn.innerHTML = originalBtnText;
         btn.disabled = false;
     });
