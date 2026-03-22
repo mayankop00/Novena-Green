@@ -3,7 +3,6 @@ document.getElementById('enquiryForm').addEventListener('submit', function(e) {
     e.preventDefault(); // Stops the page from redirecting
     
     const form = e.target;
-    // CRITICAL FIX: Convert data to URL-encoded string so Google accepts it via fetch
     const formData = new FormData(form);
     const urlEncodedData = new URLSearchParams(formData).toString();
     const name = document.getElementById('userName').value;
@@ -17,13 +16,12 @@ document.getElementById('enquiryForm').addEventListener('submit', function(e) {
     // Send the data securely in the background
     fetch(form.action, {
         method: 'POST',
-        mode: 'no-cors', // Crucial for bypassing Google's strict CORS policy
+        mode: 'no-cors', 
         headers: {
             'Content-Type': 'application/x-www-form-urlencoded'
         },
         body: urlEncodedData
     }).then(() => {
-        // Trigger success popup
         Swal.fire({
             title: 'Thank You, ' + name + '!',
             text: 'Your enquiry has been received. Our property expert will contact you shortly.',
@@ -31,9 +29,8 @@ document.getElementById('enquiryForm').addEventListener('submit', function(e) {
             confirmButtonColor: '#166534',
             confirmButtonText: 'Great!'
         });
-        form.reset(); // Clear the inputs
+        form.reset(); 
     }).catch(error => {
-        // Handle errors
         Swal.fire({
             title: 'Oops!',
             text: 'There was a network error. Please try again later.',
@@ -41,7 +38,6 @@ document.getElementById('enquiryForm').addEventListener('submit', function(e) {
             confirmButtonColor: '#166534'
         });
     }).finally(() => {
-        // Reset button state
         btn.innerHTML = originalBtnText;
         btn.disabled = false;
     });
